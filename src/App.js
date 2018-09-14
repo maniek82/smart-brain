@@ -125,7 +125,7 @@ const initialState = {
     onButtonSubmit = () => {
       this.setState({imageUrl: this.state.input});
 
-      fetch('https://agile-bayou-93645.herokuapp.com/imageurl', {
+      fetch('https://lit-tundra-95972.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -136,7 +136,7 @@ const initialState = {
         .then(response => {
 
           if (response) {
-            fetch('https://agile-bayou-93645.herokuapp.com/image', {
+            fetch('https://lit-tundra-95972.herokuapp.com/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
