@@ -131,9 +131,7 @@ const initialState = {
         body: JSON.stringify({
           input: this.state.input
         })
-      })
-      .then(response=>response.json())
-        .then(response => {
+      }).then(response=>response.json()).then(response => {
 
           if (response) {
             fetch('https://lit-tundra-95972.herokuapp.com/image', {
@@ -142,16 +140,12 @@ const initialState = {
               body: JSON.stringify({
                 id: this.state.user.id
               })
-            })
-              .then(response => response.json())
-              .then(count => {
+            }).then(response => response.json()).then(count => {
                 this.setState({user: Object.assign(this.state.user, {entries: count})})
-              })
-              .catch(console.log)
+              }).catch(console.log)
           }
           this.displayFaceBox(this.calculateFaceLocation(response))
-        })
-        .catch(err => console.log(err));
+        }).catch(err => console.log(err));
     }
   
     onRouteChange = (route) => {
