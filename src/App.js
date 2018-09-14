@@ -125,7 +125,7 @@ const initialState = {
     onButtonSubmit = () => {
       this.setState({imageUrl: this.state.input});
 
-      fetch('https://lit-tundra-95972.herokuapp.com/imageurl', {
+      fetch('https://smart-brain-backend-server.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -134,7 +134,7 @@ const initialState = {
       }).then(response=>response.json()).then(response => {
 
           if (response) {
-            fetch('https://lit-tundra-95972.herokuapp.com/image', {
+            fetch('https://smart-brain-backend-server.herokuapp.com/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({

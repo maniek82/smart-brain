@@ -25,7 +25,7 @@ class Register extends Component {
 
 
   onSubmitRegister = () => {
-    fetch('https://lit-tundra-95972.herokuapp.com/register',{
+    fetch('https://smart-brain-backend-server.herokuapp.com/register',{
       method:'post',
       headers:{'Content-Type': 'application/json'},
       body: JSON.stringify({
